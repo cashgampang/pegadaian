@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Pegadaian Gold Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#ffc233",
+              },
+              teal: {
+                500: "#14b8a6",
+                600: "#0d9488",
+              },
+              "cg-500": "#00377C", // Added custom color for background
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Added mobile-specific styles -->
+    <style>
+      /* Mobile-specific styles - only apply on small screens */
+      @media (max-width: 1023px) {
+        /* Convert interactive cards to simple stacked cards on mobile */
+        .mobile-card-container {
+          display: flex !important;
+          flex-direction: column !important;
+          height: auto !important;
+          gap: 1rem;
+        }
+
+        .mobile-card {
+          flex: none !important;
+          height: 200px !important;
+          border-radius: 1rem !important;
+          cursor: default !important;
+        }
+
+        .mobile-card .card-content {
+          opacity: 1 !important;
+          padding: 1.5rem !important;
+          flex-direction: column !important;
+        }
+
+        .mobile-card .card-title {
+          display: none !important;
+        }
+
+        .mobile-card .card-content > div:first-child {
+          flex: 1;
+        }
+
+        .mobile-card .card-content > div:last-child {
+          display: none !important;
+        }
+
+        .mobile-card h3 {
+          font-size: 1.5rem !important;
+          margin-bottom: 0.75rem !important;
+        }
+
+        .mobile-card p {
+          font-size: 0.875rem !important;
+          margin-bottom: 1rem !important;
+          line-height: 1.4 !important;
+        }
+
+        .mobile-card .space-y-3 {
+          display: none !important;
+        }
+
+        .mobile-card .text-3xl {
+          font-size: 1.25rem !important;
+        }
+      }
+
+      /* Hide desktop interactive cards on mobile */
+      @media (max-width: 1023px) {
+        .desktop-cards {
+          display: none !important;
+        }
+      }
+
+      /* Hide mobile cards on desktop */
+      @media (min-width: 1024px) {
+        .mobile-cards {
+          display: none !important;
+        }
+      }
+
+      /* Fixed vertical text positioning for inactive cards */
+      .card-title h3 {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.2em;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Include Header -->
+    <header class="sticky top-0 bg-white shadow-sm z-50">
+      <div id="header-container"></div>
+    </header>
+
+    <!-- Gold Products Section -->
+    <section class="py-6 sm:py-16 lg:py-20 bg-cg-500">
+      <div class="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white"
+          >
+            Produk <span class="text-gold-600">Emas</span> Terbaik
+          </h1>
+          <p class="text-white text-lg max-w-2xl mx-auto">
+            Pilih jenis emas berkualitas tinggi untuk investasi dan kebutuhan
+            Anda
+          </p>
+        </div>
+
+        <!-- Desktop interactive cards - hidden on mobile -->
+        <div
+          class="desktop-cards flex h-96 rounded-3xl overflow-hidden shadow-2xl mb-16 max-w-6xl mx-auto"
+        >
+          <!-- Emas Batangan Card -->
+          <div
+            class="card relative transition-all duration-700 ease-in-out cursor-pointer active"
+            data-card="batangan"
+            onclick="activateCard('batangan')"
+          >
+            <!-- Updated background to use image instead of gradient -->
+            <div>
+              <img
+                src="./img/aksen.jpg"
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Active content -->
+            <div
+              class="card-content absolute inset-0 p-8 flex opacity-100 transition-opacity duration-500"
+            >
+              <div class="flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-gold-500 text-3xl font-bold mb-6 tracking-wide">
+                    Emas Batangan
+                  </h3>
+                  <p class="mb-6 text-lg leading-relaxed">
+                    Investasi emas terbaik dengan kemurnian tinggi dan
+                    sertifikat resmi untuk masa depan yang lebih terjamin.
+                  </p>
+                  <div class="space-y-3 text-sm font-medium">
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Kemurnian 99.99% (24 karat)</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Tersedia mulai dari 1 gram</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Sertifikat resmi Antam</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Investasi jangka panjang terbaik</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-sm opacity-75 mb-2">Harga per gram</div>
+                  <div class="text-3xl font-bold">Rp 1.045.000</div>
+                </div>
+              </div>
+              <div class="flex-shrink-0 flex items-center justify-center ml-8">
+                <div
+                  class="w-64 h-64 bg-white/20 rounded-3xl flex items-center justify-center backdrop-blur-sm"
+                >
+                  <img src="./img/products/emas_batangan.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Vertical title for inactive state -->
+            <div
+              class="card-title absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500"
+            >
+              <h3
+                class="text-gold-400 font-bold text-2xl tracking-widest whitespace-nowrap"
+              >
+                BATANGAN
+              </h3>
+            </div>
+          </div>
+
+          <!-- Emas Perhiasan Card -->
+          <div
+            class="card relative transition-all duration-700 ease-in-out cursor-pointer"
+            data-card="perhiasan"
+            onclick="activateCard('perhiasan')"
+          >
+            <!-- Background gradient -->
+            <img
+              src="./img/aksen.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+
+            <!-- Active content -->
+            <div
+              class="card-content absolute inset-0 p-8 flex opacity-0 transition-opacity duration-500"
+            >
+              <div class="flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-gold-500 text-3xl font-bold mb-6 tracking-wide">
+                    Emas Perhiasan
+                  </h3>
+                  <p class=" mb-6 text-lg leading-relaxed">
+                    Koleksi perhiasan emas eksklusif dengan desain elegan untuk
+                    momen spesial dan investasi bergaya.
+                  </p>
+                  <div class="space-y-3 text-sm font-medium">
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Kemurnian 18-22 karat</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Design eksklusif dan elegan</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Kalung, cincin, gelang, anting</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Garansi kualitas terjamin</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-sm opacity-75 mb-2">Mulai dari</div>
+                  <div class="text-3xl font-bold">Rp 2.500.000</div>
+                </div>
+              </div>
+              <div class="flex-shrink-0 flex items-center justify-center ml-8">
+                <div
+                  class="w-64 h-64 bg-white/20 rounded-3xl flex items-center justify-center backdrop-blur-sm"
+                >
+                  <img src="./img/products/perhiasan.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Vertical title for inactive state -->
+            <div
+              class="card-title absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-500"
+            >
+              <h3
+                class="text-gold-400 font-bold text-2xl tracking-widest whitespace-nowrap"
+              >
+                PERHIASAN
+              </h3>
+            </div>
+          </div>
+
+          <!-- Emas Koin Card -->
+          <div
+            class="card relative transition-all duration-700 ease-in-out cursor-pointer"
+            data-card="koin"
+            onclick="activateCard('koin')"
+          >
+            <!-- Background gradient -->
+            <div>
+              <img
+                src="./img/aksen.jpg"
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Active content -->
+            <div
+              class="card-content absolute inset-0 p-8 flex opacity-0 transition-opacity duration-500"
+            >
+              <div class="flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-gold-400 text-3xl font-bold mb-6 tracking-wide">
+                    Logam Mulia
+                  </h3>
+                  <p class="mb-6 text-lg leading-relaxed">
+                    Investasi emas dalam bentuk koin dengan nilai historis dan
+                    kemudahan penyimpanan yang praktis.
+                  </p>
+                  <div class="space-y-3 text-sm font-medium">
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Kemurnian 99.9% (24 karat)</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Koin emas Dinar dan collectible</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Ukuran 1-5 gram per koin</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      <span>Mudah disimpan dan portable</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-sm opacity-75 mb-2">Harga per koin</div>
+                  <div class="text-3xl font-bold">Rp 1.200.000</div>
+                </div>
+              </div>
+              <div class="flex-shrink-0 flex items-center justify-center ml-8">
+                <div
+                  class="w-64 h-64 bg-white/20 rounded-3xl flex items-center justify-center backdrop-blur-sm"
+                >
+                  <img src="./img/products/logam_mulia.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Vertical title for inactive state -->
+            <div
+              class="card-title absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-500"
+            >
+              <h3
+                class="text-gold-400 font-bold text-2xl tracking-widest whitespace-nowrap"
+              >
+                LOGAM MULIA
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile simple cards - hidden on desktop -->
+        <div class="mobile-cards mobile-card-container mb-16">
+          <!-- Mobile Emas Batangan Card -->
+          <div class="mobile-card relative overflow-hidden shadow-lg">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-amber-300 via-yellow-400 to-orange-500"
+            ></div>
+            <div class="card-content absolute inset-0 text-white flex">
+              <div class="flex-1">
+                <h3 class="font-bold tracking-wide">Emas Batangan</h3>
+                <p class="text-white/90 leading-relaxed">
+                  Investasi emas terbaik dengan kemurnian tinggi dan sertifikat
+                  resmi.
+                </p>
+                <div class="mt-4">
+                  <div class="text-xs opacity-75 mb-1">Harga per gram</div>
+                  <div class="font-bold">Rp 1.045.000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Emas Perhiasan Card -->
+          <div class="mobile-card relative overflow-hidden shadow-lg">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-orange-400 via-red-400 to-pink-500"
+            ></div>
+            <div class="card-content absolute inset-0 text-white flex">
+              <div class="flex-1">
+                <h3 class="font-bold tracking-wide">Emas Perhiasan</h3>
+                <p class="text-white/90 leading-relaxed">
+                  Koleksi perhiasan emas eksklusif dengan desain elegan untuk
+                  momen spesial.
+                </p>
+                <div class="mt-4">
+                  <div class="text-xs opacity-75 mb-1">Mulai dari</div>
+                  <div class="font-bold">Rp 2.500.000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Emas Koin Card -->
+          <div class="mobile-card relative overflow-hidden shadow-lg">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-yellow-600 via-amber-700 to-orange-800"
+            ></div>
+            <div class="card-content absolute inset-0 text-white flex">
+              <div class="flex-1">
+                <h3 class="font-bold tracking-wide">Emas Koin</h3>
+                <p class="text-white/90 leading-relaxed">
+                  Investasi emas dalam bentuk koin dengan nilai historis dan
+                  kemudahan penyimpanan.
+                </p>
+                <div class="mt-4">
+                  <div class="text-xs opacity-75 mb-1">Harga per koin</div>
+                  <div class="font-bold">Rp 1.200.000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gold Price Calculator Section -->
+    <section class="bg-white py-12 sm:py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Kalkulator <span class="text-gold-600">Gadai Emas</span>
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Hitung estimasi pinjaman dan biaya gadai emas Anda dengan mudah
+          </p>
+        </div>
+
+        <!-- Enhanced mobile responsiveness for calculator -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+          <!-- Calculator Form -->
+          <div class="bg-gray-50 rounded-2xl p-4 sm:p-6 lg:p-8">
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">
+              Simulasi Pinjaman
+            </h3>
+
+            <div class="space-y-4 sm:space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Berat Emas (gram)</label
+                >
+                <input
+                  type="number"
+                  id="goldWeight"
+                  class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent"
+                  placeholder="Masukkan berat emas"
+                  min="1"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Periode Pinjaman (hari)</label
+                >
+                <select
+                  id="loanPeriod"
+                  class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent"
+                >
+                  <option value="15">15 Hari</option>
+                  <option value="30">30 Hari</option>
+                  <option value="45">45 Hari</option>
+                  <option value="60">60 Hari</option>
+                  <option value="75">75 Hari</option>
+                  <option value="90">90 Hari</option>
+                  <option value="105">105 Hari</option>
+                  <option value="120">120 Hari</option>
+                </select>
+              </div>
+
+              <button
+                onclick="calculateLoan()"
+                class="w-full bg-gold-600 text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base rounded-lg hover:bg-gold-700 transition-colors font-medium"
+              >
+                Hitung Pinjaman
+              </button>
+            </div>
+          </div>
+
+          <!-- Results Table -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8"
+          >
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">
+              Hasil Perhitungan
+            </h3>
+
+            <div id="calculationResults" class="space-y-4">
+              <div class="text-center text-gray-500 py-6 sm:py-8">
+                <svg
+                  class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 text-gray-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <p class="text-sm sm:text-base">
+                  Masukkan data emas untuk melihat hasil perhitungan
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Information Cards -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12"
+        >
+          <div class="bg-blue-50 rounded-xl p-6 text-center">
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2">Bunga Rendah</h4>
+            <p class="text-sm text-gray-600">
+              Bunga hanya 1.5% per 15 hari, sangat kompetitif di pasaran
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-xl p-6 text-center">
+            <div
+              class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2">Aman & Terpercaya</h4>
+            <p class="text-sm text-gray-600">
+              Emas Anda disimpan dengan sistem keamanan berlapis
+            </p>
+          </div>
+
+          <div
+            class="bg-gold-50 rounded-xl p-6 text-center sm:col-span-2 lg:col-span-1"
+          >
+            <div
+              class="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-gold-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2">Proses Cepat</h4>
+            <p class="text-sm text-gray-600">
+              Pencairan dana dalam hitungan menit setelah verifikasi
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+      // Load header and footer
+      async function loadComponent(url, containerId) {
+        try {
+          const response = await fetch(url);
+          const html = await response.text();
+          document.getElementById(containerId).innerHTML = html;
+        } catch (error) {
+          console.error(`Error loading ${url}:`, error);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        loadComponent("./header/header.html", "header-container");
+        loadComponent("./footer/footer.html", "footer-container");
+
+        // Initialize cards on page load
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card) => {
+          const cardData = card.getAttribute("data-card");
+          if (cardData === "batangan") {
+            card.style.flex = "3";
+          } else {
+            card.style.flex = "0.5";
+          }
+        });
+      });
+
+      // Gold price calculation
+      function calculateLoan() {
+        const weight = parseFloat(document.getElementById("goldWeight").value);
+        const period = parseInt(document.getElementById("loanPeriod").value);
+
+        if (!weight || weight <= 0) {
+          alert("Mohon masukkan berat emas yang valid");
+          return;
+        }
+
+        // Current gold price per gram (24k)
+        const goldPricePerGram = 1901743;
+
+        // Calculate actual gold value based on purity
+        const goldValue = weight * goldPricePerGram;
+
+        // Loan amount (typically 80-90% of gold value)
+        const loanPercentage = 0.8;
+        const principalLoan = Math.floor(goldValue * loanPercentage);
+
+        // Admin fee (1% of principal)
+        const adminFee = Math.floor(principalLoan * 0.01);
+
+        // Interest calculation (1.5% per 15 days)
+        const interestPer15Days = 0.015;
+        const interestPeriods = Math.ceil(period / 15);
+        const totalInterest = Math.floor(
+          principalLoan * interestPer15Days * interestPeriods
+        );
+
+        // Total amount to pay back
+        const totalPayback = principalLoan + totalInterest;
+
+        // Net amount received (principal - admin fee)
+        const netAmount = principalLoan - adminFee;
+
+        displayResults({
+          goldValue,
+          principalLoan,
+          adminFee,
+          totalInterest,
+          totalPayback,
+          netAmount,
+          weight,
+          period,
+        });
+      }
+
+      function displayResults(data) {
+        const resultsDiv = document.getElementById("calculationResults");
+
+        resultsDiv.innerHTML = `
+                <div class="space-y-3 sm:space-y-4">
+                    <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs sm:text-sm text-gray-600">Pokok Pinjaman (80%)</span>
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base">Rp ${data.principalLoan.toLocaleString(
+                              "id-ID"
+                            )}</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs sm:text-sm text-gray-600">Biaya Admin (1%)</span>
+                            <span class="font-semibold text-red-600 text-sm sm:text-base">-Rp ${data.adminFee.toLocaleString(
+                              "id-ID"
+                            )}</span>
+                        </div>
+                        <div class="border-t pt-2">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-gray-900 text-sm sm:text-base">Dana Diterima</span>
+                                <span class="font-bold text-green-600 text-base sm:text-lg">Rp ${data.netAmount.toLocaleString(
+                                  "id-ID"
+                                )}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gold-50 rounded-lg p-3 sm:p-4">
+                        <h4 class="font-semibold text-gray-900 mb-3 text-sm sm:text-base">Rincian Pembayaran (${
+                          data.period
+                        } hari)</h4>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs sm:text-sm text-gray-600">Pokok Pinjaman</span>
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base">Rp ${data.principalLoan.toLocaleString(
+                              "id-ID"
+                            )}</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs sm:text-sm text-gray-600">Bunga (1.5% per 15 hari)</span>
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base">Rp ${data.totalInterest.toLocaleString(
+                              "id-ID"
+                            )}</span>
+                        </div>
+                        <div class="border-t pt-2">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-gray-900 text-sm sm:text-base">Total Pelunasan</span>
+                                <span class="font-bold text-gold-600 text-base sm:text-lg">Rp ${data.totalPayback.toLocaleString(
+                                  "id-ID"
+                                )}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg p-3 sm:p-4">
+                        <div class="flex items-start">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div class="text-xs sm:text-sm text-blue-800">
+                                <p class="font-medium mb-1">Catatan Penting:</p>
+                                <ul class="space-y-1 text-xs">
+                                    <li>• Perhitungan ini adalah estimasi</li>
+                                    <li>• Harga emas dapat berubah sewaktu-waktu</li>
+                                    <li>• Maksimal periode pinjaman 120 hari</li>
+                                    <li>• Emas dapat ditebus kapan saja</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+      }
+
+      // Mobile menu functionality
+      document.addEventListener("click", function (e) {
+        if (e.target.closest("#mobile-menu-button")) {
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (mobileMenu) {
+            mobileMenu.classList.toggle("hidden");
+          }
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.addEventListener("click", function (e) {
+        if (e.target.matches('a[href^="#"]')) {
+          e.preventDefault();
+          const target = document.querySelector(e.target.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }
+      });
+
+      function activateCard(cardName) {
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          const cardData = card.getAttribute("data-card");
+          const content = card.querySelector(".card-content");
+          const title = card.querySelector(".card-title");
+
+          if (cardData === cardName) {
+            // Activate this card
+            card.classList.add("active");
+            card.style.flex = "3";
+            content.style.opacity = "1";
+            title.style.opacity = "0";
+          } else {
+            // Deactivate other cards
+            card.classList.remove("active");
+            card.style.flex = "0.5";
+            content.style.opacity = "0";
+            title.style.opacity = "1";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
