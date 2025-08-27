@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gadai Handphone - CG-GADAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#ffc233",
+              },
+              teal: {
+                500: "#14b8a6",
+                600: "#0d9488",
+              },
+              cg: {
+                500: "#00377C",
+                600: "#013275",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-br from-cg-600 to-cg-600 text-white py-16 sm:py-20 lg:py-24"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            Gadai <span class="text-gold-400">Handphone</span> Terpercaya
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Dapatkan pinjaman cepat dengan jaminan handphone berkualitas tinggi.
+            Kami menerima smartphone terbaru dengan kondisi prima dan
+            spesifikasi unggulan.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#calculator"
+              class="bg-gold-500 hover:bg-gold-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Hitung Pinjaman
+            </a>
+            <a
+              href="#contact"
+              class="border-2 border-white text-white hover:bg-white hover:text-cg-600 px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Konsultasi Gratis
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kriteria Handphone -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Kriteria Handphone <span class="text-cg-600">Bernilai Tinggi</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Kami menerima handphone dengan kriteria khusus untuk memberikan
+            nilai pinjaman terbaik
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-gold-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Tahun Terbaru</h3>
+            <p class="text-gray-600 mb-4">
+              Handphone keluaran 2-3 tahun terakhir dengan teknologi terdepan
+            </p>
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>• iPhone 12 ke atas</li>
+              <li>• Samsung Galaxy S21+</li>
+              <li>• Flagship Android terbaru</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-teal-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Fisik Mulus</h3>
+            <p class="text-gray-600 mb-4">
+              Kondisi fisik excellent tanpa kerusakan berarti
+            </p>
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>• Layar tidak retak/pecah</li>
+              <li>• Body tidak penyok</li>
+              <li>• Fungsi normal 100%</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-cg-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-cg-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Spesifikasi Tinggi
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Spesifikasi premium dengan performa unggulan
+            </p>
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>• RAM 8GB ke atas</li>
+              <li>• Storage 128GB+</li>
+              <li>• Processor flagship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Handphone -->
+    <section class="py-12 sm:py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Brand <span class="text-cg-600">Terpercaya</span>
+          </h2>
+          <p class="text-lg text-gray-600">
+            Kami menerima berbagai brand handphone premium dengan nilai tinggi
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
+          <div
+            class="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors"
+          >
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/social-media-logos-glyph/2048/5315_-_Apple-512.png"
+              alt=""
+            />
+            <h3 class="font-semibold text-gray-900">Apple</h3>
+            <p class="text-sm text-gray-600">iP 12, 13, 14, 15 Series</p>
+          </div>
+          <div
+            class="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors"
+          >
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/samsung-512.png"
+              alt=""
+            />
+            <h3 class="font-semibold text-gray-900">Samsung</h3>
+            <p class="text-sm text-gray-600">Galaxy S & Note Series</p>
+          </div>
+          <div
+            class="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors"
+          >
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/sony-512.png"
+              alt=""
+            />
+            <h3 class="font-semibold text-gray-900">Sony</h3>
+            <p class="text-sm text-gray-600">Xperia 1 series & Xperia Pro</p>
+          </div>
+          <div
+            class="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors"
+          >
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/388_Xiaomi_logo-512.png" alt="">
+            <h3 class="font-semibold text-gray-900">Xiaomi</h3>
+            <p class="text-sm text-gray-600">Mi & Redmi Flasgship</p>
+          </div>
+          <div
+            class="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors"
+          >
+            <img src="https://cdn1.iconfinder.com/data/icons/brands-5/512/fi-brands-huawei-512.png" alt="">
+            <h3 class="font-semibold text-gray-900">Huawei</h3>
+            <p class="text-sm text-gray-600">P & Mate Series</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kalkulator Pinjaman -->
+    <section id="calculator" class="py-12 sm:py-16 lg:py-20 bg-cg-600">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Kalkulator <span class="text-gold-400">Pinjaman Handphone</span>
+          </h2>
+          <p class="text-lg text-white">
+            Hitung estimasi pinjaman berdasarkan nilai handphone Anda
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-6">
+                Input Data Handphone
+              </h3>
+
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Brand Handphone</label
+                  >
+                  <select
+                    id="phoneBrand"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cg-500 focus:border-cg-500"
+                  >
+                    <option value="">Pilih Brand</option>
+                    <option value="iphone">Apple</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="xiaomi">Xiaomi</option>
+                    <option value="sony">Sony</option>
+                    <option value="huawei">Huawei</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Harga Beli (Rp)</label
+                  >
+                  <input
+                    type="number"
+                    id="phonePrice"
+                    placeholder="Contoh: 15000000"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cg-500 focus:border-cg-500"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Kondisi Fisik</label
+                  >
+                  <select
+                    id="phoneCondition"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cg-500 focus:border-cg-500"
+                  >
+                    <option value="">Pilih Kondisi</option>
+                    <option value="excellent">Like New (95-100%)</option>
+                    <option value="very-good"> Mulus (90-94%)</option>
+                    <option value="good">Baik (75-84%)</option>
+                    <option value="fair">Cukup Baik (65-74%)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Tahun Pembelian</label
+                  >
+                  <select
+                    id="phoneYear"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cg-500 focus:border-cg-500"
+                  >
+                    <option value="">Pilih Tahun</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                  </select>
+                </div>
+
+                <button
+                  onclick="calculateLoan()"
+                  class="w-full bg-cg-600 hover:bg-cg-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Hitung Pinjaman
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-6">
+                Hasil Perhitungan
+              </h3>
+
+              <div id="calculationResult" class="space-y-4">
+                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                  <p class="text-gray-600">
+                    Silakan isi data handphone untuk melihat estimasi pinjaman
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proses Gadai -->
+    <section class="py-12 sm:py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Proses <span class="text-cg-600">Gadai Mudah</span>
+          </h2>
+          <p class="text-lg text-gray-600">
+            Dapatkan pinjaman dalam 4 langkah sederhana
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-cg-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+            >
+              1
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Bawa Handphone</h3>
+            <p class="text-gray-600">
+              Bawa handphone dan dokumen identitas ke kantor kami
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gold-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+            >
+              2
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Penilaian</h3>
+            <p class="text-gray-600">
+              Tim ahli menilai kondisi dan spesifikasi handphone Anda
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-teal-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+            >
+              3
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Penawaran</h3>
+            <p class="text-gray-600">
+              Dapatkan penawaran terbaik sesuai nilai handphone
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+            >
+              4
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Terima Dana</h3>
+            <p class="text-gray-600">
+              Dana cair langsung setelah kesepakatan tercapai
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      id="contact"
+      class="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-cg-500 to-cg-500 text-white"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+          Siap <span class="text-gold-400">Gadai</span> Handphone Anda?
+        </h2>
+        <p class="text-lg text-gray-200 mb-8">
+          Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran
+          terbaik
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/6282299141811"
+            class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            WhatsApp Sekarang
+          </a>
+          <a
+            href="tel:+6281234567890"
+            class="border-2 border-white text-white hover:bg-white hover:text-cg-600 px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Telepon Langsung
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+      // Load header and footer
+      async function loadComponent(url, containerId) {
+        try {
+          const response = await fetch(url);
+          const html = await response.text();
+          document.getElementById(containerId).innerHTML = html;
+        } catch (error) {
+          console.error(`Error loading ${url}:`, error);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        loadComponent("./header/header.html", "header-container");
+        loadComponent("./footer/footer.html", "footer-container");
+      });
+
+      // Phone loan calculator
+      function calculateLoan() {
+        const brand = document.getElementById("phoneBrand").value;
+        const price = parseFloat(document.getElementById("phonePrice").value);
+        const condition = document.getElementById("phoneCondition").value;
+        const year = parseInt(document.getElementById("phoneYear").value);
+
+        if (!brand || !price || !condition || !year) {
+          alert("Mohon lengkapi semua data handphone");
+          return;
+        }
+
+        // Calculate depreciation based on year
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - year;
+        let depreciationRate = 0;
+
+        if (age === 0) depreciationRate = 0.08; // 10% for current year
+        else if (age === 1) depreciationRate = 0.15; // 25% for 1 year old
+        else if (age === 2) depreciationRate = 0.25; // 40% for 2 years old
+        else if (age === 3) depreciationRate = 0.45; // 55% for 3 years old
+        else depreciationRate = 0.65; // 70% for older phones
+
+        // Condition multiplier
+        let conditionMultiplier = 1;
+        switch (condition) {
+          case "excellent":
+            conditionMultiplier = 1;
+            break;
+          case "very-good":
+            conditionMultiplier = 0.9;
+            break;
+          case "good":
+            conditionMultiplier = 0.85;
+            break;
+          case "fair":
+            conditionMultiplier = 0.75;
+            break;
+        }
+
+        // Brand multiplier
+        let brandMultiplier = 1;
+        switch (brand) {
+          case "iphone":
+            brandMultiplier = 1.2;
+            break;
+          case "samsung":
+            brandMultiplier = 1.2;
+            break;
+          case "xiaomi":
+            brandMultiplier = 0.9;
+            break;
+          case "sony":
+            brandMultiplier = 1;
+            break;
+          case "huawei":
+            brandMultiplier = 1;
+            break;
+        }
+
+        // Calculate current value
+        const currentValue =
+          price *
+          (1 - depreciationRate) *
+          conditionMultiplier *
+          brandMultiplier;
+
+        // Loan amount (70% of current value)
+        const loanAmount = currentValue * 0.85;
+
+        // Admin fee (1% of loan)
+        const adminFee = loanAmount * 0.01;
+
+        // Net amount received
+        const netAmount = loanAmount - adminFee;
+
+        // Display results
+        const resultDiv = document.getElementById("calculationResult");
+        resultDiv.innerHTML = `
+                <div class="space-y-4">
+                    <div class="bg-cg-50 rounded-lg p-4">
+                        <h4 class="font-semibold text-cg-800 mb-2">Estimasi Nilai Handphone</h4>
+                        <p class="text-2xl font-bold text-cg-600">Rp ${currentValue.toLocaleString(
+                          "id-ID"
+                        )}</p>
+                    </div>
+                    
+                    <div class="bg-gold-50 rounded-lg p-4">
+                        <h4 class="font-semibold text-gold-800 mb-2">Jumlah Pinjaman (80%)</h4>
+                        <p class="text-2xl font-bold text-gold-600">Rp ${loanAmount.toLocaleString(
+                          "id-ID"
+                        )}</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Biaya Admin (1%)</h4>
+                        <p class="text-lg font-semibold text-gray-600">Rp ${adminFee.toLocaleString(
+                          "id-ID"
+                        )}</p>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-4 border-2 border-green-200">
+                        <h4 class="font-semibold text-green-800 mb-2">Dana yang Diterima</h4>
+                        <p class="text-3xl font-bold text-green-600">Rp ${netAmount.toLocaleString(
+                          "id-ID"
+                        )}</p>
+                    </div>
+                    
+                    <div class="text-sm text-gray-500 mt-4">
+                        <p>* Estimasi berdasarkan kondisi dan spesifikasi yang dipilih</p>
+                        <p>* Nilai final akan ditentukan setelah penilaian langsung</p>
+                    </div>
+                </div>
+            `;
+      }
+    </script>
+  </body>
+</html>

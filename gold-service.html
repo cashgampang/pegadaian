@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products - Pegadaian Gold Services</title>
+    <title>SERVICES - CG-GADAI</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -19,7 +23,10 @@
                 500: "#14b8a6",
                 600: "#0d9488",
               },
-              "cg-500": "#00377C", // Added custom color for background
+              cg: {
+                500: "#00377C",
+                600: "#013275",
+              },
             },
           },
         },
@@ -51,7 +58,7 @@
         }
 
         .mobile-card .card-title {
-          display: none !important;
+          /* display: none !important; */
         }
 
         .mobile-card .card-content > div:first-child {
@@ -59,7 +66,7 @@
         }
 
         .mobile-card .card-content > div:last-child {
-          display: none !important;
+          /* display: none !important; */
         }
 
         .mobile-card h3 {
@@ -114,33 +121,32 @@
     <header class="sticky top-0 bg-white shadow-sm z-50">
       <div id="header-container"></div>
     </header>
-
-    <!-- Gold Products Section -->
+    <!-- Seksi Gadai Emas -->
     <section class="py-6 sm:py-16 lg:py-20 bg-cg-500">
       <div class="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h1
             class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white"
           >
-            Produk <span class="text-gold-600">Emas</span> Terbaik
+            Gadai <span class="text-gold-600">Emas</span> Gampang Banget!
           </h1>
           <p class="text-white text-lg max-w-2xl mx-auto">
-            Pilih jenis emas berkualitas tinggi untuk investasi dan kebutuhan
-            Anda
+            Apa pun jenis <span class="text-gold-400">emas mu</span>, kita
+            terima buat digadai dengan proses cepet dan aman
           </p>
         </div>
 
-        <!-- Desktop interactive cards - hidden on mobile -->
+        <!-- Kartu interaktif buat desktop - ilang di mobile -->
         <div
           class="desktop-cards flex h-96 rounded-3xl overflow-hidden shadow-2xl mb-16 max-w-6xl mx-auto"
         >
-          <!-- Emas Batangan Card -->
+          <!-- Kartu Emas Batangan -->
           <div
             class="card relative transition-all duration-700 ease-in-out cursor-pointer active"
             data-card="batangan"
             onclick="activateCard('batangan')"
           >
-            <!-- Updated background to use image instead of gradient -->
+            <!-- Background pake gambar -->
             <div>
               <img
                 src="./img/aksen.jpg"
@@ -149,41 +155,39 @@
               />
             </div>
 
-            <!-- Active content -->
+            <!-- Konten aktif -->
             <div
               class="card-content absolute inset-0 p-8 flex opacity-100 transition-opacity duration-500"
             >
               <div class="flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-gold-500 text-3xl font-bold mb-6 tracking-wide">
+                  <h3
+                    class="text-gold-500 text-3xl font-bold mb-6 tracking-wide"
+                  >
                     Emas Batangan
                   </h3>
                   <p class="mb-6 text-lg leading-relaxed">
-                    Investasi emas terbaik dengan kemurnian tinggi dan
-                    sertifikat resmi untuk masa depan yang lebih terjamin.
+                    Punya emas batangan? Gadai di sini, proses kilat, nilai
+                    tinggi, dan aman 100%.
                   </p>
                   <div class="space-y-3 text-sm font-medium">
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Kemurnian 99.99% (24 karat)</span>
+                      <span>Terima semua ukuran mulai 1 gram</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Tersedia mulai dari 1 gram</span>
+                      <span>Penilaian berdasarkan kemurnian 99.99%</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Sertifikat resmi Antam</span>
+                      <span>Sertifikat Antam? Langsung diterima!</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Investasi jangka panjang terbaik</span>
+                      <span>Proses cepet, duit langsung cair</span>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <div class="text-sm opacity-75 mb-2">Harga per gram</div>
-                  <div class="text-3xl font-bold">Rp 1.045.000</div>
                 </div>
               </div>
               <div class="flex-shrink-0 flex items-center justify-center ml-8">
@@ -195,7 +199,7 @@
               </div>
             </div>
 
-            <!-- Vertical title for inactive state -->
+            <!-- Judul vertikal buat mode idle -->
             <div
               class="card-title absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500"
             >
@@ -207,54 +211,52 @@
             </div>
           </div>
 
-          <!-- Emas Perhiasan Card -->
+          <!-- Kartu Emas Perhiasan -->
           <div
             class="card relative transition-all duration-700 ease-in-out cursor-pointer"
             data-card="perhiasan"
             onclick="activateCard('perhiasan')"
           >
-            <!-- Background gradient -->
+            <!-- Background gambar -->
             <img
               src="./img/aksen.jpg"
               alt=""
               class="absolute inset-0 w-full h-full object-cover"
             />
 
-            <!-- Active content -->
+            <!-- Konten aktif -->
             <div
               class="card-content absolute inset-0 p-8 flex opacity-0 transition-opacity duration-500"
             >
               <div class="flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-gold-500 text-3xl font-bold mb-6 tracking-wide">
+                  <h3
+                    class="text-gold-500 text-3xl font-bold mb-6 tracking-wide"
+                  >
                     Emas Perhiasan
                   </h3>
-                  <p class=" mb-6 text-lg leading-relaxed">
-                    Koleksi perhiasan emas eksklusif dengan desain elegan untuk
-                    momen spesial dan investasi bergaya.
+                  <p class="mb-6 text-lg leading-relaxed">
+                    Perhiasan emas kesayanganmu bisa jadi solusi cepet buat
+                    kebutuhan dadakan. Gadai sekarang, bro!
                   </p>
                   <div class="space-y-3 text-sm font-medium">
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Kemurnian 18-22 karat</span>
+                      <span>Terima 18-22 karat, apa aja oke</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Design eksklusif dan elegan</span>
+                      <span>Kalung, cincin, gelang, anting, semua bisa!</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Kalung, cincin, gelang, anting</span>
+                      <span>Penilaian transparan, no drama</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Garansi kualitas terjamin</span>
+                      <span>Proses kilat, duit langsung di tangan</span>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <div class="text-sm opacity-75 mb-2">Mulai dari</div>
-                  <div class="text-3xl font-bold">Rp 2.500.000</div>
                 </div>
               </div>
               <div class="flex-shrink-0 flex items-center justify-center ml-8">
@@ -266,7 +268,7 @@
               </div>
             </div>
 
-            <!-- Vertical title for inactive state -->
+            <!-- Judul vertikal buat mode idle -->
             <div
               class="card-title absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-500"
             >
@@ -278,13 +280,13 @@
             </div>
           </div>
 
-          <!-- Emas Koin Card -->
+          <!-- Kartu Logam Mulia -->
           <div
             class="card relative transition-all duration-700 ease-in-out cursor-pointer"
             data-card="koin"
             onclick="activateCard('koin')"
           >
-            <!-- Background gradient -->
+            <!-- Background gambar -->
             <div>
               <img
                 src="./img/aksen.jpg"
@@ -293,41 +295,39 @@
               />
             </div>
 
-            <!-- Active content -->
+            <!-- Konten aktif -->
             <div
               class="card-content absolute inset-0 p-8 flex opacity-0 transition-opacity duration-500"
             >
               <div class="flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-gold-400 text-3xl font-bold mb-6 tracking-wide">
+                  <h3
+                    class="text-gold-400 text-3xl font-bold mb-6 tracking-wide"
+                  >
                     Logam Mulia
                   </h3>
                   <p class="mb-6 text-lg leading-relaxed">
-                    Investasi emas dalam bentuk koin dengan nilai historis dan
-                    kemudahan penyimpanan yang praktis.
+                    Koin emas atau logam mulia? Gadai di sini, nilai oke, proses
+                    gampang, dan aman banget!
                   </p>
                   <div class="space-y-3 text-sm font-medium">
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Kemurnian 99.9% (24 karat)</span>
+                      <span>Terima kemurnian 99.9% (24 karat)</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Koin emas Dinar dan collectible</span>
+                      <span>Koin Dinar atau koleksi lain, gas!</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Ukuran 1-5 gram per koin</span>
+                      <span>Ukuran 1-5 gram, semua oke</span>
                     </div>
                     <div class="flex items-center">
                       <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                      <span>Mudah disimpan dan portable</span>
+                      <span>Proses cepet, no ribet</span>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <div class="text-sm opacity-75 mb-2">Harga per koin</div>
-                  <div class="text-3xl font-bold">Rp 1.200.000</div>
                 </div>
               </div>
               <div class="flex-shrink-0 flex items-center justify-center ml-8">
@@ -339,7 +339,7 @@
               </div>
             </div>
 
-            <!-- Vertical title for inactive state -->
+            <!-- Judul vertikal buat mode idle -->
             <div
               class="card-title absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-500"
             >
@@ -352,63 +352,52 @@
           </div>
         </div>
 
-        <!-- Mobile simple cards - hidden on desktop -->
+        <!-- Kartu simpel buat mobile - ilang di desktop -->
         <div class="mobile-cards mobile-card-container mb-16">
           <!-- Mobile Emas Batangan Card -->
           <div class="mobile-card relative overflow-hidden shadow-lg">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-amber-300 via-yellow-400 to-orange-500"
-            ></div>
-            <div class="card-content absolute inset-0 text-white flex">
+            <img src="./img/aksen.jpg" alt="" />
+            <div class="card-content absolute inset-0 flex">
               <div class="flex-1">
                 <h3 class="font-bold tracking-wide">Emas Batangan</h3>
-                <p class="text-white/90 leading-relaxed">
-                  Investasi emas terbaik dengan kemurnian tinggi dan sertifikat
-                  resmi.
+                <p class="leading-relaxed">
+                  Emas batanganmu bisa digadai di sini, proses cepet, nilai
+                  tinggi!
                 </p>
-                <div class="mt-4">
-                  <div class="text-xs opacity-75 mb-1">Harga per gram</div>
-                  <div class="font-bold">Rp 1.045.000</div>
-                </div>
+              </div>
+              <div class="flex justify-end">
+                <img src="./img/products/emas_batangan.png" width="80" />
               </div>
             </div>
           </div>
 
           <!-- Mobile Emas Perhiasan Card -->
           <div class="mobile-card relative overflow-hidden shadow-lg">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-orange-400 via-red-400 to-pink-500"
-            ></div>
-            <div class="card-content absolute inset-0 text-white flex">
+            <img src="./img/aksen.jpg" alt="" />
+            <div class="card-content absolute inset-0 flex">
               <div class="flex-1">
                 <h3 class="font-bold tracking-wide">Emas Perhiasan</h3>
-                <p class="text-white/90 leading-relaxed">
-                  Koleksi perhiasan emas eksklusif dengan desain elegan untuk
-                  momen spesial.
+                <p class="leading-relaxed">
+                  Perhiasan emas apa aja, gadai di sini, duit langsung cair!
                 </p>
-                <div class="mt-4">
-                  <div class="text-xs opacity-75 mb-1">Mulai dari</div>
-                  <div class="font-bold">Rp 2.500.000</div>
-                </div>
+              </div>
+              <div class="flex justify-end">
+                <img src="./img/products/perhiasan.png" width="80" />
               </div>
             </div>
           </div>
 
-          <!-- Mobile Emas Koin Card -->
+          <!-- Mobile Logam Mulia Card -->
           <div class="mobile-card relative overflow-hidden shadow-lg">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-yellow-600 via-amber-700 to-orange-800"
-            ></div>
-            <div class="card-content absolute inset-0 text-white flex">
+            <img src="./img/aksen.jpg" alt="" />
+            <div class="card-content absolute inset-0 flex">
               <div class="flex-1">
-                <h3 class="font-bold tracking-wide">Emas Koin</h3>
-                <p class="text-white/90 leading-relaxed">
-                  Investasi emas dalam bentuk koin dengan nilai historis dan
-                  kemudahan penyimpanan.
+                <h3 class="font-bold tracking-wide">Logam Mulia</h3>
+                <p class="leading-relaxed">
+                  Koin emas atau logam mulia? Gadai sekarang, gampang dan aman!
                 </p>
-                <div class="mt-4">
-                  <div class="text-xs opacity-75 mb-1">Harga per koin</div>
-                  <div class="font-bold">Rp 1.200.000</div>
+                <div class="flex justify-end">
+                  <img src="./img/products/logam_mulia.png" width="80" />
                 </div>
               </div>
             </div>
@@ -425,7 +414,7 @@
             Kalkulator <span class="text-gold-600">Gadai Emas</span>
           </h2>
           <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-            Hitung estimasi pinjaman dan biaya gadai emas Anda dengan mudah
+            Hitung estimasi pinjaman dan biaya gadai emas mu dengan mudah!
           </p>
         </div>
 
@@ -563,10 +552,10 @@
           </div>
 
           <div
-            class="bg-gold-50 rounded-xl p-6 text-center sm:col-span-2 lg:col-span-1"
+            class="bg-yellow-50 rounded-xl p-6 text-center sm:col-span-2 lg:col-span-1"
           >
             <div
-              class="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4"
             >
               <svg
                 class="w-6 h-6 text-gold-600"
